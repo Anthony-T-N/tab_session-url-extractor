@@ -1,5 +1,7 @@
 #!/usr/bin/python
+
 import json
+import cProfile
 
 extracted_url_list = []
 
@@ -30,4 +32,4 @@ def main():
     print("Line count: " + str(len(extracted_url_list)))
         
 if __name__ == '__main__':
-    main()
+    cProfile.runctx(main(), globals(), locals())
